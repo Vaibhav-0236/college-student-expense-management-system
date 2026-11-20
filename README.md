@@ -28,9 +28,37 @@ Developed as part of the **Computational Thinking and Programming (2026CSAE100)*
 ├── main.py        # Central CLI interface, input validation, and system integration
 ├── analysis.py    # Analytical computation engine, ranking, and budget rules
 ├── storage.py     # File handling, CSV reading/writing, and data cleaning
+├── expenses.csv   # Persistent CSV dataset containing logged student expenses
 ├── .gitignore     # Git ignore configuration
 └── README.md      # Project overview and documentation
 ```
+
+---
+
+## 🔄 Application Workflow
+
+```text
+  [ User Input via CLI ]
+            │
+            ▼
+        main.py ◄──────────────────────► analysis.py
+    (Input Validation &               (Rankings, Projections,
+      Menu Controller)                 Budget Status & Alerts)
+            │
+            ▼
+        storage.py
+    (Data Cleaning &
+      File I/O Engine)
+            │
+            ▼
+      expenses.csv & budget.txt
+         (Data Persistence)
+```
+
+1. **Load Data:** At startup, `main.py` loads existing records via `storage.load_expenses()` and budget settings via `storage.load_budget()`.
+2. **User Interaction:** The interactive CLI displays 9 menu options, validating all amounts, dates, and category selections against edge cases before processing.
+3. **Analytical Processing:** When reports, rankings, or anomaly checks are requested, `main.py` passes the data to `analysis.py` for selection-sort ranking, percentage calculations, and budget warnings.
+4. **Data Persistence:** Any newly added or deleted expenses immediately trigger `storage.save_all_expenses()` to persist updates cleanly to `expenses.csv`.
 
 ---
 
