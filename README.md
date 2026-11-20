@@ -81,6 +81,7 @@ python3 main.py
 * **Tanmay Kaushik** (`S26CSEU1401`): Data persistence and storage layer (`storage.py`), add/view/delete options with input checks.
 * **Parth Sahlot** (`S26CSEU1410`): Analytical computations, category sorting/ranking, and budget projection rules (`analysis.py`).
 * **Krishna Gupta** (`S26CSEU1370`): Category chart visualization and export as picture using Matplotlib (`chart_option`).
+* **Prince Sharma** (`S26CSEU1377`): Month-end spending projections, presentation slide design, and live project demonstration.
 * **Vaibhav Ojha** (`S26CSEU1372`): System architecture, main CLI menu loop, integration, edge-case testing, and report compilation (`main.py`).
 
 **Faculty Mentor:** Jayant Vyas
